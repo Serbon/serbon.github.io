@@ -46,6 +46,14 @@ $(document).ready(function(){
 		$(window).resize();
 	});
 	
+	// EVENT HANDLERS
+	$(document).mousemove(function(e){
+		
+		$("#content .background .bg").css("top", 75-(e.pageY / $(window).height() * 50) + "%" || "50%" );
+		$("#content .background .bg").css("left", 75-(e.pageX / $(window).width() * 50) + "%" || "50%" );
+		
+	});
+	
 });
 
 
