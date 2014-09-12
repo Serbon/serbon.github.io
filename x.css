@@ -11,7 +11,7 @@
 }
 
 body {
-	font-family: "comic sans ms", open-sans, sans-serif;
+	font-family: open-sans, sans-serif;
 	overflow-x: hidden;
 }
 
@@ -19,19 +19,57 @@ body {
 #header {
 	background: #ff5a5a;
 	position: fixed;
-	min-height: 10px;
+	height: 4em;
 	min-width: 100%;
 	top: 0;
 	left: 0;
 	z-index: 100;
+	color: #fff;
+}
+#header #title {
+	font-size: 2em;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
 }
 
 /* CONTENT STUFF */
 #content {
-	padding: 10px 0px;
+	padding: 0px 0px;
 	position: absolute;
-	left: 10px;
-	right: 10px;
+	left: 0px;
+	right: 0px;
+	top: 4em;
+}
+
+#content .title {
+	display: block;
+	font-size: 1.3em;
+}
+
+#content .center {
+	text-align: center;
+}
+
+#content .background {
+	overflow: hidden;
+	position: relative;
+}
+#content .background span {
+	color: #fff;
+	padding: 30px 0px;
+	display: block;
+}
+#content .background .bg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	z-index: -1;
 }
 
 /* FOOTER STUFF */
@@ -42,7 +80,7 @@ body {
 	min-width: 100%;
 	left: -10px;
 	right: -10px;
-	background: #ff0;
+	background: #fff;
 	padding: 10px 0px;
 	z-index: 99;
 	text-align: center;

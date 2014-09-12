@@ -29,4 +29,40 @@ $(document).ready(function(){
 		return;
 	}
 	
+	//AJAX request xheader.html
+	$.ajax({
+		url: '/xheader.html',
+		async: false
+	}).done(function(data){
+		$("#header").html(data);
+	});
+	
+	//AJAX request xfooter.html
+	$.ajax({
+		url: '/xfooter.html',
+		async: false
+	}).done(function(data){
+		$("#footer").html(data);
+		$(window).resize();
+	});
+	
+});
+
+
+//relative element positioning
+$(window).resize(function(){
+	
+	var documentHeight = 0;
+	if( $("#footer").hasClass("fixed") || true ) {
+		documentHeight = $("#header").outerHeight() + $("#content").outerHeight() + $("#footer").outerHeight();
+	} else {
+		documentHeight = $("#header").outerHeight() + $("#content").outerHeight();
+	}
+	
+	if( documentHeight > $(window).height() ) {
+		$("#footer").removeClass("fixed");
+	} else {
+		$("#footer").addClass("fixed");
+	}
+	
 });
