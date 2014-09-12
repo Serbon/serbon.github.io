@@ -1,0 +1,53 @@
+
+/* ANIMATE EVERYTHING :3 */
+* {
+	-webkit-transition: all .5s cubic-bezier(.2,.3,0,1);
+	transition: all .5s cubic-bezier(.2,.3,0,1);
+}
+
+/* REMOVE THE FOCUS OUTLINE :3 */
+*:focus {
+	outline: 0;
+}
+
+body {
+	font-family: "comic sans ms", open-sans, sans-serif;
+	overflow-x: hidden;
+}
+
+/* HEADER STUFF */
+#header {
+	background: #ff5a5a;
+	position: fixed;
+	min-height: 10px;
+	min-width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+/* CONTENT STUFF */
+#content {
+	padding: 10px 0px;
+	position: absolute;
+	left: 10px;
+	right: 10px;
+}
+
+/* FOOTER STUFF */
+#footer {
+	position: absolute;
+	margin-top: 10px;
+	min-height: 10px;
+	min-width: 100%;
+	left: -10px;
+	right: -10px;
+	background: #ff0;
+	padding: 10px 0px;
+	z-index: 99;
+	text-align: center;
+}
+#footer.fixed {
+	position: fixed;
+	bottom: 0;
+}
